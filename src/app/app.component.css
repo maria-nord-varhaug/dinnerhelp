@@ -1,0 +1,9 @@
+.content {
+    margin: 2rem;
+    display: flex; 
+}
+
+.ingredients {
+    height: 25rem;
+    overflow: scroll;
+}

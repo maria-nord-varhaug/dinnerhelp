@@ -1,0 +1,7 @@
+<div class="ingredient">
+    <span><h3>{{ingredient.name}} </h3>
+        <p>{{ingredient.category}}</p></span>
+    <!-- <fa-icon [ngStyle]="{'color': 'red'}" [icon]="faTimes"></fa-icon> -->
+    <app-button text="Delete" (click)="onDelete(ingredient)" ></app-button>
+    <app-button text="Edit" (click)="onEdit(ingredient)"></app-button>
+</div>

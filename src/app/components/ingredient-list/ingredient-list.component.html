@@ -1,0 +1,8 @@
+<app-ingredient 
+    *ngFor="let ingredient of ingredients"
+    [ingredient]="ingredient" 
+    (onDeleteIngredient)="deleteIngredient(ingredient)"
+    (onEditIngredient)="editIngredient(ingredient)"
+>
+    {{ingredient.name}}
+</app-ingredient>

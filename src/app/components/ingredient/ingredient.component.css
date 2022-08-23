@@ -1,0 +1,13 @@
+.ingredient {
+    background: #f4f4f4;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    width: 20rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+h3 {
+    margin: 0;
+    font-weight: 500; 
+}

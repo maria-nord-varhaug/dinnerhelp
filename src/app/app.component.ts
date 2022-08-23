@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Ingredient } from './Models';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'dinnerapp';
+  editCard: boolean = false;
+  editIngredient(ingredient: Ingredient){
+    console.log(ingredient);
+    this.editCard = true;
+  }
+
+  showIngredients(){
+    console.log("TOGGLED");
+  }
+  
 }
