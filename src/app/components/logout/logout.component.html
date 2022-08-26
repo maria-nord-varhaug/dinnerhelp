@@ -1,0 +1,7 @@
+<ng-container *ngIf="auth.isAuthenticated$ | async;">
+    <button [routerLink]="'./login'" (click)="auth.logout({ returnTo: document.location.origin })">
+      Sign out
+    </button>
+  </ng-container>
+
+ 

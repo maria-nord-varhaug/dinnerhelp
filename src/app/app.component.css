@@ -1,9 +1,7 @@
 .content {
     margin: 2rem;
-    display: flex; 
+    padding: 0.5em;
+    color: rgb(35, 35, 35);
+    
 }
 
-.ingredients {
-    height: 25rem;
-    overflow: scroll;
-}

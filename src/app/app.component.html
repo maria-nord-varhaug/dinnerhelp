@@ -1,10 +1,9 @@
 <div class="container">
   <app-header></app-header>
   <div class="content">
-    
-    <mat-card class="ingredients"><app-ingredient-list (onEditIngredient)="editIngredient(ingredient)"></app-ingredient-list></mat-card>
-    <mat-card *ngIf="editCard" ><app-editingredient></app-editingredient></mat-card>
-    
+
+    <router-outlet></router-outlet>
+   
     <!--<app-dish-list></app-dish-list>-->
     <!--<app-ingredientsearch></app-ingredientsearch>-->
   </div>

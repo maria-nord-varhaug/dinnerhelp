@@ -13,10 +13,15 @@ import {MatButtonModule} from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import { DishListComponent } from './components/dish-list/dish-list.component';
 import { DishComponent } from './components/dish/dish.component';
-import { IngredientsearchComponent } from './components/ingredientsearch/ingredientsearch.component';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatCardModule} from '@angular/material/card';
-import { EditingredientComponent } from './components/editingredient/editingredient.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { LoginComponent } from './components/login/login.component';
+import { AuthModule } from '@auth0/auth0-angular';
+import { LogoutComponent } from './components/logout/logout.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+
 
 @NgModule({
   declarations: [
@@ -27,8 +32,9 @@ import { EditingredientComponent } from './components/editingredient/editingredi
     IngredientListComponent,
     DishListComponent,
     DishComponent,
-    IngredientsearchComponent,
-    EditingredientComponent,
+    LoginComponent,
+    LogoutComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,7 +44,14 @@ import { EditingredientComponent } from './components/editingredient/editingredi
     FontAwesomeModule,
     HttpClientModule,
     MatAutocompleteModule,
-    MatCardModule
+    MatCardModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatGridListModule,
+    AuthModule.forRoot({
+      domain: 'dev-64emz5cl.us.auth0.com',
+      clientId: 'DS0Nmr594dmSC3OqWjWOiqShTkn0i3Xa'
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

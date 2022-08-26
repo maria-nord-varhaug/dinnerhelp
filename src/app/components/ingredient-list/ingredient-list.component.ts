@@ -1,6 +1,8 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IngredientService } from 'src/app/services/ingredient.service';
 import { Ingredient } from 'src/app/Models';
+import { AuthService } from '@auth0/auth0-angular';
+
 
 @Component({
   selector: 'app-ingredient-list',
@@ -8,9 +10,10 @@ import { Ingredient } from 'src/app/Models';
   styleUrls: ['./ingredient-list.component.css']
 })
 export class IngredientListComponent implements OnInit {
-  @Output() onEditIngredient: EventEmitter<Ingredient> = new EventEmitter();
   ingredients: Ingredient[] = [];
-  constructor(private ingredientService: IngredientService) { }
+  deletedIngredients: Ingredient[] = [];
+
+  constructor(private ingredientService: IngredientService, public auth: AuthService) { }
 
   ngOnInit(): void {
     this.ingredientService.getIngredients().subscribe(
@@ -18,16 +21,12 @@ export class IngredientListComponent implements OnInit {
       );
   }
 
-  editIngredient(ingredient: Ingredient){
-    this.onEditIngredient.emit(ingredient);
-    //this.ingredientService.editIngredient(ingredient).subscribe()
-  }
 
   deleteIngredient(ingredient: Ingredient){
+  
     this.ingredientService.deleteIngredient(ingredient).subscribe(
-      () => this.ingredients = this.ingredients.filter(i => i.id != ingredient.id))
+      ()=>this.ingredients = this.ingredients.filter(i => i.id != ingredient.id)
+    )
   }
-
-
 
 }

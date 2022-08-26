@@ -1,13 +1,54 @@
-.ingredient {
-    background: #f4f4f4;
-    padding: 0.5em;
-    margin-bottom: 1em;
-    width: 20rem;
+
+
+.ingredients{
     display: flex;
-    justify-content: space-between;
+    padding: 1rem;
+    background: #fff4f7;
+    border-width: 1px 1px 0px 1px;
+    border-style: solid;
+    border-color: #ffcfdc;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 0;
+}
+
+.ingredients  > div {
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
 }
 
 h3 {
     margin: 0;
-    font-weight: 500; 
+    padding: 0;
+}
+
+.ingredients > div > div {
+    display: flex;
+    flex-direction: column;
+
+}
+
+input {
+    width: 5rem;
+    height: 1.5rem;
+    background: white;
+    border: 1px solid #ffa6d0;
+}
+
+.category{
+    flex: 3;
+}
+
+select {
+    height: 1.5rem;
+    background: white;
+    border: 1px solid #ffa6d0;
+    border-radius: 1px;
+    
+}
+
+button {
+    width: 5rem;
 }

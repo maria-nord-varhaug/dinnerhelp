@@ -1,0 +1,3 @@
+[submodule "ingredientApp"]
+	path = ingredientApp
+	url = https://github.com/maria-nord-varhaug/ingredientApp.git

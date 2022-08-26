@@ -1,24 +1,14 @@
 //interface for ingredinets
 
-export enum Categories {
-    Vegetable = "Vegetable",
-    Fruit = "Fruit",
-    Berry = "Berry",
-    Meat = "Meat",
-    Fish = "Fish",
-    Pasta = "Pasta",
-    Grain = "Grain",
-    Rice = "Rice",
-    Bean = "Bean",
-    Fragrance = "Fragrance",
-    Spice = "Spice",
-    Fluids = "Fluids"
+export interface Category {
+    id: number;
+    name: string;
 }
 
 export interface Ingredient {
     id?: number;
     name: string;
-    category: Categories;
+    categoryId: number;
 }
 
 export interface Dish {

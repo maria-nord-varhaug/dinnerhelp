@@ -1,8 +1,11 @@
-<app-ingredient 
+<ng-container *ngIf="auth.isAuthenticated$ | async;">
+    <app-ingredient 
     *ngFor="let ingredient of ingredients"
     [ingredient]="ingredient" 
     (onDeleteIngredient)="deleteIngredient(ingredient)"
-    (onEditIngredient)="editIngredient(ingredient)"
 >
-    {{ingredient.name}}
-</app-ingredient>
+    </app-ingredient>
+    <button>Apply changes</button>
+
+</ng-container>
+
